@@ -1128,7 +1128,7 @@ def genereer_vragen_uit_tekst(tekst, aantal=3, moeilijkheid='normaal'):
         
         # Verwijder speciale tekens en normalizeer
         schonere_zin = re.sub(r'[^\w\s]', '', zin).strip()
-        woorden = schoner_zin.split()
+        woorden = schonere_zin.split()
         
         if len(woorden) < 5:
             continue
