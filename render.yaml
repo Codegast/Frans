@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: schoolportaal
+    runtime: python
+    buildCommand: ""
+    startCommand: gunicorn app:app --bind 0.0.0.0:$PORT --workers 2 --timeout 120
+    autoDeploy: false
+    healthCheckPath: /health
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: FLASK_DEBUG
+        value: "0"
+      - key: LOG_LEVEL
+        value: "INFO"
