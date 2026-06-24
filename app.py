@@ -79,7 +79,7 @@ ICONS = {
     'sun': '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>',
 }
 
-def icon(name, size=16):
+def icon(name, size=18):
     svg = ICONS.get(name, '')
     if svg:
         svg = svg.replace('<svg', f'<svg width="{size}" height="{size}"')
@@ -340,7 +340,7 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backg
 .card{background:var(--glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:20px;padding:28px;margin-bottom:24px;transition:all .3s cubic-bezier(.4,0,.2,1);box-shadow:0 4px 24px rgba(0,0,0,.2)}
 .card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(124,77,255,.2);border-color:rgba(124,77,255,.3)}
 .card h2{color:var(--primary-light);margin-bottom:16px;font-size:20px;display:flex;align-items:center;gap:10px;font-weight:700}
-.card h2 svg{width:20px;height:20px;fill:currentColor;flex-shrink:0}
+.card h2 svg{width:22px;height:22px;fill:currentColor;flex-shrink:0}
 .navbar{background:rgba(15,12,41,.95);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);padding:10px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--glass-border);position:sticky;top:0;z-index:1000;box-shadow:0 4px 30px rgba(0,0,0,.4);flex-wrap:wrap;gap:10px}
 .navbar .logo{font-size:20px;font-weight:800;color:var(--primary-light);display:flex;align-items:center;gap:10px;text-shadow:0 0 20px rgba(124,77,255,.5);flex-shrink:0}
 .navbar .logo .logo-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:10px;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:bold;flex-shrink:0;box-shadow:0 4px 20px rgba(124,77,255,.4)}
@@ -388,7 +388,7 @@ tr:last-child td{border-bottom:none}
 .rol-select:hover{border-color:var(--primary);background:rgba(124,77,255,.12);transform:translateY(-4px)}
 .rol-select.selected{border-color:var(--primary);background:linear-gradient(135deg,rgba(124,77,255,.2),rgba(124,77,255,.1));box-shadow:0 8px 30px rgba(124,77,255,.3);transform:scale(1.02)}
 .rol-select .rol-icon{display:block;margin-bottom:8px}
-.rol-select .rol-icon svg{width:18px;height:18px;max-width:18px;max-height:18px}
+.rol-select .rol-icon svg{width:22px;height:22px;max-width:22px;max-height:22px}
 .pin-display{font-size:56px;font-weight:800;color:var(--primary-light);letter-spacing:12px;text-align:center;padding:32px;background:linear-gradient(135deg,rgba(124,77,255,.15),rgba(124,77,255,.05));border:3px dashed rgba(124,77,255,.4);border-radius:20px;margin:20px 0;font-family:'Courier New',monospace;text-shadow:0 0 30px rgba(124,77,255,.4);animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.7}}
 .login-screen{display:flex;justify-content:center;align-items:center;min-height:100vh;padding:24px;position:relative}
