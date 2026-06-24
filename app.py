@@ -340,13 +340,13 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backg
 .card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(124,77,255,.2);border-color:rgba(124,77,255,.3)}
 .card h2{color:var(--primary-light);margin-bottom:16px;font-size:20px;display:flex;align-items:center;gap:10px;font-weight:700}
 .card h2 svg{width:24px;height:24px;fill:currentColor}
-.navbar{background:rgba(15,12,41,.85);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);padding:14px 32px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--glass-border);position:sticky;top:0;z-index:1000;box-shadow:0 4px 30px rgba(0,0,0,.3)}
-.navbar .logo{font-size:22px;font-weight:800;color:var(--primary-light);display:flex;align-items:center;gap:12px;text-shadow:0 0 20px rgba(124,77,255,.5)}
-.navbar .logo .logo-icon{width:42px;height:42px;background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:12px;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:18px;font-weight:bold;flex-shrink:0;box-shadow:0 4px 20px rgba(124,77,255,.4)}
-.navbar a{color:#b0b8c4;text-decoration:none;margin-left:8px;padding:10px 16px;border-radius:12px;font-size:14px;font-weight:500;transition:all .25s ease;white-space:nowrap;display:inline-flex;align-items:center;gap:8px}
+.navbar{background:rgba(15,12,41,.95);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);padding:10px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--glass-border);position:sticky;top:0;z-index:1000;box-shadow:0 4px 30px rgba(0,0,0,.4);flex-wrap:wrap;gap:10px}
+.navbar .logo{font-size:20px;font-weight:800;color:var(--primary-light);display:flex;align-items:center;gap:10px;text-shadow:0 0 20px rgba(124,77,255,.5);flex-shrink:0}
+.navbar .logo .logo-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:10px;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:bold;flex-shrink:0;box-shadow:0 4px 20px rgba(124,77,255,.4)}
+.navbar a{color:#b0b8c4;text-decoration:none;padding:8px 14px;border-radius:10px;font-size:13px;font-weight:500;transition:all .2s ease;white-space:nowrap;display:inline-flex;align-items:center;gap:6px;flex-shrink:0}
 .navbar a:hover{background:rgba(124,77,255,.2);color:#fff;transform:translateY(-1px)}
 .navbar a.active{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:#fff;box-shadow:0 4px 15px rgba(124,77,255,.3)}
-.navbar .nav-wrap{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.navbar .nav-wrap{display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:flex-end;max-width:100%}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 24px;border-radius:12px;text-decoration:none;font-size:14px;font-weight:600;border:none;cursor:pointer;text-align:center;transition:all .25s cubic-bezier(.4,0,.2,1);line-height:1.2;position:relative;overflow:hidden}
 .btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.2),transparent);transition:left .5s}
 .btn:hover::before{left:100%}
