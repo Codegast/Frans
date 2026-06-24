@@ -82,7 +82,8 @@ ICONS = {
 def icon(name, size=16):
     svg = ICONS.get(name, '')
     if svg:
-        return svg.replace('width="24"', f'width="{size}"').replace('height="24"', f'height="{size}"')
+        svg = svg.replace('<svg', f'<svg width="{size}" height="{size}"')
+        return svg
     return ''
 
 # ==== Logging ====
@@ -339,7 +340,7 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backg
 .card{background:var(--glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid var(--glass-border);border-radius:20px;padding:28px;margin-bottom:24px;transition:all .3s cubic-bezier(.4,0,.2,1);box-shadow:0 4px 24px rgba(0,0,0,.2)}
 .card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(124,77,255,.2);border-color:rgba(124,77,255,.3)}
 .card h2{color:var(--primary-light);margin-bottom:16px;font-size:20px;display:flex;align-items:center;gap:10px;font-weight:700}
-.card h2 svg{width:24px;height:24px;fill:currentColor}
+.card h2 svg{width:20px;height:20px;fill:currentColor;flex-shrink:0}
 .navbar{background:rgba(15,12,41,.95);backdrop-filter:blur(24px);-webkit-backdrop-filter:blur(24px);padding:10px 24px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--glass-border);position:sticky;top:0;z-index:1000;box-shadow:0 4px 30px rgba(0,0,0,.4);flex-wrap:wrap;gap:10px}
 .navbar .logo{font-size:20px;font-weight:800;color:var(--primary-light);display:flex;align-items:center;gap:10px;text-shadow:0 0 20px rgba(124,77,255,.5);flex-shrink:0}
 .navbar .logo .logo-icon{width:36px;height:36px;background:linear-gradient(135deg,var(--primary),var(--primary-light));border-radius:10px;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:16px;font-weight:bold;flex-shrink:0;box-shadow:0 4px 20px rgba(124,77,255,.4)}
@@ -358,7 +359,8 @@ body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;backg
 .btn-g:hover{background:linear-gradient(135deg,rgba(0,230,118,.4),rgba(0,230,118,.25));transform:translateY(-2px);border-color:var(--success)}
 .btn-sm{padding:8px 16px;font-size:13px;border-radius:10px}
 .btn-full{width:100%;padding:16px;font-size:16px}
-.btn svg{width:18px;height:18px}
+svg{max-width:100%;height:auto}
+.btn svg{width:16px;height:16px;flex-shrink:0}
 .welkom{font-size:17px;color:#a0a8b8;margin-bottom:24px;padding:12px 0;font-weight:500}
 .welkom strong{color:var(--primary-light);font-weight:700}
 label.f{display:block;margin-bottom:12px;color:var(--primary-light);font-weight:600;font-size:14px}
@@ -386,7 +388,7 @@ tr:last-child td{border-bottom:none}
 .rol-select:hover{border-color:var(--primary);background:rgba(124,77,255,.12);transform:translateY(-4px)}
 .rol-select.selected{border-color:var(--primary);background:linear-gradient(135deg,rgba(124,77,255,.2),rgba(124,77,255,.1));box-shadow:0 8px 30px rgba(124,77,255,.3);transform:scale(1.02)}
 .rol-select .rol-icon{display:block;margin-bottom:8px}
-.rol-select .rol-icon svg{width:24px;height:24px}
+.rol-select .rol-icon svg{width:18px;height:18px;max-width:18px;max-height:18px}
 .pin-display{font-size:56px;font-weight:800;color:var(--primary-light);letter-spacing:12px;text-align:center;padding:32px;background:linear-gradient(135deg,rgba(124,77,255,.15),rgba(124,77,255,.05));border:3px dashed rgba(124,77,255,.4);border-radius:20px;margin:20px 0;font-family:'Courier New',monospace;text-shadow:0 0 30px rgba(124,77,255,.4);animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.7}}
 .login-screen{display:flex;justify-content:center;align-items:center;min-height:100vh;padding:24px;position:relative}
