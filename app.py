@@ -79,7 +79,7 @@ ICONS = {
     'sun': '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>',
 }
 
-def icon(name, size=20):
+def icon(name, size=16):
     svg = ICONS.get(name, '')
     if svg:
         return svg.replace('width="24"', f'width="{size}"').replace('height="24"', f'height="{size}"')
@@ -524,8 +524,8 @@ LOGIN_HTML = """<!DOCTYPE html>
 <form method="POST" action="/login">
 <label class="f">""" + icon('user', 18) + """ Rol</label>
   <div class="rol-grid">
-  <div class="rol-select" onclick="selectRol(this,'docent')" id="rd"><span class="rol-icon">""" + icon('user', 28) + """</span><span>Docent</span></div>
-  <div class="rol-select" onclick="selectRol(this,'leerling')" id="rl"><span class="rol-icon">""" + icon('students', 28) + """</span><span>Leerling</span></div>
+  <div class="rol-select" onclick="selectRol(this,'docent')" id="rd"><span class="rol-icon">""" + icon('user', 20) + """</span><span>Docent</span></div>
+  <div class="rol-select" onclick="selectRol(this,'leerling')" id="rl"><span class="rol-icon">""" + icon('students', 20) + """</span><span>Leerling</span></div>
   </div>
 <input type="hidden" name="rol" id="rol" value="docent">
 <label class="f">""" + icon('user', 18) + """ Gebruikersnaam<input type="text" name="gebruikersnaam" required placeholder="Vul je gebruikersnaam in"></label>
