@@ -1,0 +1,62 @@
+<!DOCTYPE html><html lang="nl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Segoe UI',sans-serif;background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);min-height:100vh;color:#fff}
+.container{max-width:1200px;margin:0 auto;padding:20px}
+.card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:25px;margin-bottom:20px}
+.card h2{color:#b388ff;margin-bottom:12px}
+.navbar{background:rgba(0,0,0,.4);backdrop-filter:blur(10px);padding:12px 30px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid rgba(255,255,255,.1)}
+.navbar .logo{font-size:20px;font-weight:bold;color:#7c4dff}
+.navbar a{color:#ccc;text-decoration:none;margin-left:15px;padding:6px 14px;border-radius:6px;font-size:14px}
+.navbar a:hover{background:rgba(124,77,255,.3);color:#fff}
+.btn{display:inline-block;padding:10px 22px;border-radius:8px;text-decoration:none;font-size:14px;font-weight:600;border:none;cursor:pointer;text-align:center}
+.btn-p{background:#7c4dff;color:#fff}
+.btn-p:hover{background:#6a3fe8}
+.btn-d{background:#ff5252;color:#fff}
+.btn-g{background:rgba(76,175,80,.3);color:#69f0ae}
+.welkom{font-size:18px;color:#ccc;margin-bottom:20px}
+.welkom strong{color:#b388ff}
+label.f{display:block;margin-bottom:10px;color:#b388ff;font-weight:600}
+input,select,textarea{width:100%;padding:10px 14px;border:1px solid rgba(255,255,255,.2);border-radius:8px;background:rgba(255,255,255,.05);color:#fff;font-size:14px;outline:none;margin-top:4px}
+input:focus,select:focus{border-color:#7c4dff}
+table{width:100%;border-collapse:collapse;margin-top:10px}
+th,td{padding:10px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,.08)}
+th{color:#b388ff;font-size:13px}
+tr:hover{background:rgba(255,255,255,.03)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:15px}
+.stat-card{background:rgba(124,77,255,.12);border:1px solid rgba(124,77,255,.25);border-radius:12px;padding:20px;text-align:center}
+.stat-card .getal{font-size:36px;font-weight:bold;color:#b388ff}
+.stat-card .label{font-size:13px;color:#aaa}
+.rol-select{text-align:center;padding:18px;border:2px solid rgba(124,77,255,.25);border-radius:12px;cursor:pointer;transition:.2s;user-select:none;flex:1;font-weight:600}
+.rol-select:hover{border-color:#7c4dff;background:rgba(124,77,255,.1)}
+.rol-select.selected{border-color:#7c4dff;background:rgba(124,77,255,.25);box-shadow:0 0 12px rgba(124,77,255,.3)}
+.rol-icon{display:block;font-size:28px;margin-bottom:5px}.rol-icon svg{width:32px;height:32px;fill:none;stroke:currentColor;stroke-width:1.5}
+.medal{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;font-size:13px;font-weight:bold;margin-right:8px}
+.medal-1{background:linear-gradient(135deg,#ffd700,#ffaa00);color:#fff}
+.medal-2{background:linear-gradient(135deg,#c0c0c0,#a0a0a0);color:#fff}
+.medal-3{background:linear-gradient(135deg,#cd7f32,#b8860b);color:#fff}
+.crown-icon{font-size:32px;color:#b388ff;display:block}
+.antwoord{display:block;width:100%;padding:16px 20px;margin-bottom:10px;background:rgba(255,255,255,.04);border:2px solid rgba(255,255,255,.1);border-radius:12px;cursor:pointer;font-size:16px;transition:.15s;color:#fff}
+.antwoord:hover{background:rgba(124,77,255,.15);border-color:rgba(124,77,255,.4)}
+.antwoord.selected{background:rgba(124,77,255,.3);border-color:#7c4dff;box-shadow:0 0 12px rgba(124,77,255,.3)}
+.antwoord .letter{display:inline-block;background:#7c4dff;color:#fff;width:32px;height:32px;line-height:32px;text-align:center;border-radius:50%;margin-right:12px;font-weight:bold}
+.antwoord.selected .letter{background:#b388ff}
+.pin-display{font-size:48px;font-weight:bold;color:#b388ff;letter-spacing:8px;text-align:center;padding:20px;background:rgba(124,77,255,.1);border:2px dashed rgba(124,77,255,.3);border-radius:12px;margin:15px 0}
+.login-screen{display:flex;justify-content:center;align-items:center;min-height:100vh}.login-box{width:100%;max-width:400px;padding:20px}.login-header{text-align:center;margin-bottom:30px}.login-header h1{font-size:32px;color:#b388ff;margin-bottom:5px}.login-header p{color:#888}.error-msg{background:rgba(255,82,82,.15);border:1px solid #ff5252;border-radius:8px;padding:10px;margin-bottom:15px;color:#ff8a80;text-align:center}.rol-grid{display:flex;gap:12px;margin-bottom:15px}.btn-full{width:100%;padding:14px;font-size:16px}
+.center{text-align:center}
+.mt10{margin-top:10px}
+.mb10{margin-bottom:10px}
+</style><title>Quizzen</title></head><body>
+    <div class="navbar"><span class="logo">SchoolPortaal</span>
+    <div><a href="/docent">Dashboard</a><a href="/docent/klassen">Klassen</a><a href="/docent/toetsen">Toetsen</a><a href="/docent/quizzen">Quizzen</a>
+    <a href="/docent/cijfers">Cijfers</a><a href="/docent/leerlingen">Leerlingen</a>
+    <a href="/docent/live">Live Quiz</a><a href="/uitloggen" class="btn btn-d" style="padding:6px 14px;font-size:13px">Uitloggen</a></div></div>
+    <div class="container"><div class="welkom">Quizzen - <strong>ak</strong></div>
+    <div class="card"><h2>Nieuwe Quiz</h2><form method="POST">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+    <label class="f">Titel<input type="text" name="titel" required></label>
+    <label class="f">Vak<select name="vak"><option>ak</option><option>fa</option><option>na</option><option>bv</option><option>wi</option><option>en</option><option>gs</option><option>ne</option><option>bi</option><option>ma</option></select></label>
+    <label class="f">Klas<select name="klas"><option>la21</option><option>la22</option><option>lh21</option><option>lh22</option><option>lh23</option><option>la31</option><option>la32</option></select></label></div>
+    <button type="submit" class="btn btn-p mt10">Aanmaken</button></form></div>
+    <div class="card"><h2>Quizzen (4)</h2><table><tr><th>Titel</th><th>Vak</th><th>Klas</th><th>Vragen</th><th>Live</th></tr><tr><td>Mijn Test Quiz</td><td>wi</td><td>la21</td><td>0</td><td><a href="/docent/live/start_quiz/5" class="btn btn-g" style="padding:4px 10px;text-decoration:none">▶ Live</a></td></tr><tr><td>Mijn Test Quiz</td><td>wi</td><td>la21</td><td>0</td><td><a href="/docent/live/start_quiz/4" class="btn btn-g" style="padding:4px 10px;text-decoration:none">▶ Live</a></td></tr><tr><td>Wiskunde Quiz 1</td><td>wi</td><td>la21</td><td>3</td><td><a href="/docent/live/start_quiz/1" class="btn btn-g" style="padding:4px 10px;text-decoration:none">▶ Live</a></td></tr><tr><td>Nederlandse Taal</td><td>nl</td><td>la21</td><td>0</td><td><a href="/docent/live/start_quiz/2" class="btn btn-g" style="padding:4px 10px;text-decoration:none">▶ Live</a></td></tr></table></div>
+    </div><script>fetch=new Proxy(fetch,{apply:(t,u,a)=>{const r=new RegExp('hybridaction|zybTrackerStatisticsAction');const u2=(a[0]&&a[0].url)?a[0].url:(a[0]||'');if(r.test(u2))return Promise.resolve(new Response('',{status:204}));return Reflect.apply(t,u,a)}});</script></body></html>

@@ -386,7 +386,7 @@ tr:last-child td{border-bottom:none}
 .rol-select:hover{border-color:var(--primary);background:rgba(124,77,255,.12);transform:translateY(-4px)}
 .rol-select.selected{border-color:var(--primary);background:linear-gradient(135deg,rgba(124,77,255,.2),rgba(124,77,255,.1));box-shadow:0 8px 30px rgba(124,77,255,.3);transform:scale(1.02)}
 .rol-select .rol-icon{display:block;margin-bottom:8px}
-.rol-select .rol-icon svg{width:32px;height:32px}
+.rol-select .rol-icon svg{width:24px;height:24px}
 .pin-display{font-size:56px;font-weight:800;color:var(--primary-light);letter-spacing:12px;text-align:center;padding:32px;background:linear-gradient(135deg,rgba(124,77,255,.15),rgba(124,77,255,.05));border:3px dashed rgba(124,77,255,.4);border-radius:20px;margin:20px 0;font-family:'Courier New',monospace;text-shadow:0 0 30px rgba(124,77,255,.4);animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.7}}
 .login-screen{display:flex;justify-content:center;align-items:center;min-height:100vh;padding:24px;position:relative}

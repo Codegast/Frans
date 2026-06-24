@@ -1,0 +1,1 @@
+web: gunicorn app:app --bind 0.0.0.0:5000 --log-level info --workers 2 --timeout 120

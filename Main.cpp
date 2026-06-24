@@ -10,8 +10,13 @@
 #include <windows.h>
 #include <string>
 #include <map>
+#include <functional>
+#include <thread>
+#include <mutex>
+#include <chrono>
 #include <vector>
 #include <sstream>
+#include <iomanip>
 #include <iostream>
 #include <algorithm>
 #include <ctime>
@@ -152,10 +157,10 @@ public:
         gebruikers.push_back({"jwinters","win123","Mevr. J.S.E. Winters","docent","","ec"});
         gebruikers.push_back({"jzijlstra","zis123","Dhr. drs. J.J. Zijlstra","docent","","gd"});
         gebruikers.push_back({"czwart","zwt123","Mevr. C. de Zwart","docent","","en"});
-        gebruikers.push_back({"piet","leerling123","Piet de Groot","leerling","4VWO",""});
-        gebruikers.push_back({"anna","leerling123","Anna Smit","leerling","3HAVO",""});
-        gebruikers.push_back({"tom","leerling123","Tom Visser","leerling","5VWO",""});
-        gebruikers.push_back({"lisa","leerling123","Lisa Bakker","leerling","2HAVO",""});
+        gebruikers.push_back({"piet","leerling123","Piet de Groot","leerling","La22",""});
+        gebruikers.push_back({"anna","leerling123","Anna Smit","leerling","Lh22",""});
+        gebruikers.push_back({"tom","leerling123","Tom Visser","leerling","La53",""});
+        gebruikers.push_back({"lisa","leerling123","Lisa Bakker","leerling","Lh23",""});
     }
 };
 

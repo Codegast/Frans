@@ -1,0 +1,9 @@
+models:
+  - title: LM Studio
+    provider: lmstudio
+    model: qwen/qwen3-vl-4b
+
+tabAutocompleteModel:
+  title: LM Studio Autocomplete
+  provider: lmstudio
+  model: qwen/qwen3-vl-4b
